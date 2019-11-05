@@ -63,26 +63,21 @@
         <article class="contenido">
             <h2>Contacto</h2>
             <form action="#" oninput="result.value=parseInt(edad.value)">
-                <div class="form-group">
-                    <input type="text" id="nombre" required autofocus placeholder="Nombre" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" required placeholder="Email" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Edad: </label>
-                    <output name="result"></output> <br>
-                    <input type="range" name="edad" min="18" max="99">
-                </div>
-                <div class="form-group">
-                    <input type="text" id="text" required placeholder="Teléfono" class="form-control">
-                </div>
-                <div class="form-group">
-                    <textarea name="textarea" rows="7" cols="50" required placeholder="Escribe aquí tu mensaje" class="form-control"></textarea>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="cookies" required> Politica de privacidad y cookies</label>
-                </div>
+                
+                <input class="cosa" type="text" id="nombre" required autofocus placeholder="Nombre" class="form-control">
+ 
+                <input class="cosa" type="email" id="email" required placeholder="Email" class="form-control">
+
+                <label>Edad: </label>
+                <output name="result"></output> <br>
+                <input class="cosa" type="range" name="edad" min="18" max="99">
+
+                <input class="cosa" type="text" id="text" required placeholder="Teléfono" class="form-control">
+                
+                <textarea class="cosa" name="textarea" rows="7" cols="50" required placeholder="Escribe aquí tu mensaje" class="form-control"></textarea>
+
+                <label><input type="checkbox" name="cookies" required> Politica de privacidad y cookies
+
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </article>
