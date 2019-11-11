@@ -18,7 +18,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 hr {
     -webkit-box-sizing: content-box;
-            box-sizing: content-box;
+    box-sizing: content-box;
     height: 0;
     overflow: visible;
     margin-top: 1rem;
@@ -115,41 +115,30 @@ nav li a:active {
     color: orange;
 }
 section {
-    padding-top: 13vh;
+    padding-top: 17vh;
 }
 article {
-    display: -ms-flexbox;
-    display: -webkit-box;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
 }
 article p
 {
     height: 100px;
     overflow: auto;
 }
-.col-sm-8 {
-    position: relative;
-    width: 100%;
+.flex {
+    width: 50em;
     padding-right: 15px;
     padding-left: 15px;
-    -ms-flex: 0 0 66.666667%;
-    -webkit-box-flex: 0;
-            flex: 0 0 66.666667%;
-    max-width: 66.666667%;
 }
 aside {
-    position: relative;
-    width: 100%;
+    width: 17em;
     padding-right: 15px;
     padding-left: 15px;
-    -ms-flex: 0 0 33.333333%;
-    -webkit-box-flex: 0;
-            flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+}
+aside p {
+    height: auto;
+    overflow: hidden
 }
 aside ul {
     list-style: none;
