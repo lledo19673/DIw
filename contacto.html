@@ -31,12 +31,9 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Bootstrap CSS --
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Material Design Bootstrap --
-    <link href="css/mdb.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
+
     <link href="css/estilo.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="print" href="css/imprime.css" />
 
     <link rel="icon" type="image/png" href="images/fav.png">
 
@@ -48,62 +45,60 @@
     </div>    
     
     <header class="contenido-fluid">
-        <nav class="contenido navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-            <a class="navbar-brand" href="index.html"><img src="images/log.png" alt="logo" height="55vh"></a>
+        <nav class="contenido">
+            <a href="index.html"><img src="images/log.png" alt="logo" height="55vh"></a>
 
-            <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>  
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>  
             </ul>
         </nav>
     </header>
 
-    <section>
-        <article class="contenido">
-            <h2>Contacto</h2>
+    <section class="contenido">
+        <article>
+            <h1>Contacto</h1>
             <form action="#" oninput="result.value=parseInt(edad.value)">
                 
-                <input class="cosa" type="text" id="nombre" required autofocus placeholder="Nombre" class="form-control">
+                <input class="cosa" type="text" id="nombre" required autofocus placeholder="Nombre">
  
-                <input class="cosa" type="email" id="email" required placeholder="Email" class="form-control">
+                <input class="cosa" type="email" id="email" required placeholder="Email">
 
-                <label>Edad: </label>
-                <output name="result"></output> <br>
+                <label></label>Edad: </label>
+                <output name="result"></output>
+                <br>
                 <input class="cosa" type="range" name="edad" min="18" max="99">
 
                 <input class="cosa" type="text" id="text" required placeholder="Teléfono" class="form-control">
                 
-                <textarea class="cosa" name="textarea" rows="7" cols="50" required placeholder="Escribe aquí tu mensaje" class="form-control"></textarea>
+                <textarea class="cosa" name="textarea" rows="7" cols="50" required placeholder="Escribe aquí tu mensaje"></textarea>
 
-                <label><input type="checkbox" name="cookies" required> Politica de privacidad y cookies
+                <label><input type="checkbox" name="cookies" required> Politica de privacidad y cookies</label>
 
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit">Enviar</button>
             </form>
         </article>
     </section>
     <br>
-    <footer class="page-footer font-small mdb-color pt-3">
+    <footer>
         <div class="contenido">
-            <div class="row text-center text-md-left mt-3 pb-3 footer-colum">
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto footer-col">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Electrolledo</h6>
+            <div class="footer-colum">
+                <div class="footer-col">
+                    <h6>Electrolledo</h6>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
     
-                <hr class="w-100 clearfix d-md-none">
-    
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 footer-col">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Mapa de sitio</h6>
+                <div class="footer-col">
+                    <h6>Mapa de sitio</h6>
                     <p><a href="index.html">Inicio</a></p>
                     <p><a href="servicios.html">Servicios</a></p>
                     <p><a href="contacto.html">Contacto</a></p>
                 </div>
 
-                <hr class="w-100 clearfix d-md-none">
-
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 footer-col">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
+                <div class="footer-col">
+                    <h6>Contacto</h6>
                     <p><i class="fas fa-home mr-3"></i> Reykjavík, Islandia</p>
                     <p><a href="mailto:info@gmail.com"><i class="fas fa-envelope mr-3"></i> info@gmail.com</a></p>
                     <p><a href="tel:+0123456789"><i class="fas fa-phone mr-3"></i> + 01 234 567 89</a></p>
@@ -112,39 +107,33 @@
             </div>
     
             <!-- Social-->
-            <div class="row pb-3">
-                <div class="col-md-12">
-                    <div class="mb-5 flex-center">
-                        <!-- Facebook -->
-                        <a href="#"><i class="fab fa-facebook-f fa-lg white-text mr-4 social"> </i></a>
-                        <!-- Twitter -->
-                        <a href="#"><i class="fab fa-twitter fa-lg white-text mr-4 social"> </i></a>
-                        <!-- Google +-->
-                        <a href="#"><i class="fab fa-google-plus-g fa-lg white-text mr-4 social"> </i></a>
-                        <!--Linkedin -->
-                        <a href="#"> <i class="fab fa-linkedin-in fa-lg white-text mr-4 social"> </i></a>
-                        <!--Instagram-->
-                        <a href="#"><i class="fab fa-instagram fa-lg white-text mr-4 social"> </i></a>
-                        <!--Pinterest-->
-                        <a href="#"><i class="fab fa-pinterest fa-lg white-text social"> </i></a>
-                    </div>
-                </div>
+            <div class="flex-center">
+                <!-- Facebook -->
+                <a href="#"><i class="fab fa-facebook-f fa-lg social"> </i></a>
+                <!-- Twitter -->
+                <a href="#"><i class="fab fa-twitter fa-lg social"> </i></a>
+                <!-- Google +-->
+                <a href="#"><i class="fab fa-google-plus-g fa-lg  social"> </i></a>
+                <!--Linkedin -->
+                <a href="#"> <i class="fab fa-linkedin-in fa-lg social"> </i></a>
+                <!--Instagram-->
+                <a href="#"><i class="fab fa-instagram fa-lg social"> </i></a>
+                <!--Pinterest-->
+                <a href="#"><i class="fab fa-pinterest fa-lg social"> </i></a>
             </div>
         </div>
+
+        
     
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2019 Copyright:
-                <a href="http://electrolledo.com/"> electrolledo.com</a>
-                <br>
-                <a href="#">Politica de privacidad</a>
-            </div>
-        </footer>
-
-
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Copyright -->
+        <div class="footer-copyright">© 2019 Copyright:
+            <a href="http://electrolledo.com/"> electrolledo.com</a>
+            <br>
+            <a href="#">Politica de privacidad</a>
+            <br>
+            <br>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional</a>.
+        </div>
+    </footer>
 </body>
 </html>
