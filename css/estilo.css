@@ -397,9 +397,9 @@ img:not([alt])
 {
     border: 3px solid red;
 }
-*[href$=".pdf"]:after
+a[href$=".pdf"]::after
 {
-    background: url(https://www.shareicon.net/data/16x16/2016/08/13/808584_document_512x512.png);
+    content: url(https://www.shareicon.net/data/16x16/2016/08/13/808584_document_512x512.png);
 }
 .parallax {
     background-image: url("https://cdn.pixabay.com/photo/2016/11/22/23/49/bright-1851267_960_720.jpg");
