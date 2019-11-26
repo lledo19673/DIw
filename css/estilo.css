@@ -118,8 +118,11 @@ section {
     padding-top: 17vh;
 }
 article {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 article p
 {
@@ -412,6 +415,7 @@ a[href$=".pdf"]::after
   }
 .parallax img{
     max-width: 400px;
+    width: 35vh;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -440,9 +444,14 @@ p.big{
     margin-bottom: 30px;
 }
 #flex-p{
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 #flex-p p{
     padding: 15px;
@@ -454,4 +463,18 @@ video {
 h1 {
     padding-bottom: 20px;
     font-size: 1.9em;
+}
+button {
+    font-weight:400;
+    text-align:center;
+    cursor:pointer;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+nav a img {
+    height: 8vh;
+}
+article img {
+    width: 100%;
 }

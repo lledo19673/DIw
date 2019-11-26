@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,8 +46,7 @@
     
     <header class="contenido-fluid">
         <nav class="contenido">
-            <a href="index.html"><img src="images/log.png" alt="logo" height="55vh"></a>
-
+            <a href="index.html"><img src="images/log.png" alt="logo"></a>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -62,17 +61,36 @@
         <br>
         <article>
             <div class="flex">
+                <h2 id="entrada7">Video botones</h2>
+                <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
+                <video id="medio"> 
+                    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type='video/ogg; codecs="theora, vorbis"' />  
+                    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+                    <img src="images/video_default.jpg" alt="Video no soportado">   
+                    Su navegador no soporta contenido multimedia.   
+                </video>
+                <button id="reiniciar"><i class="fas fa-undo-alt"></i></button>
+                <button id="retrasar"><i class="fas fa-backward"></i></button>
+                <button id="play"><i class="fas fa-play"></i></button>
+                <button id="adelantar"><i class="fas fa-forward"></i></button>
+                <button id="silenciar"><i class="fas fa-volume-mute"></i></button>
+                <button id="menosVolumen"><i class="fas fa-volume-down"></i></button>
+                <button id="masVolumen"><i class="fas fa-volume-up"></i></button>
+                <br>
+                <br> 
+                <br> 
                 <h2 id="entrada6">Audio</h2>
                 <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
-                <audio id="medio" controls>
+                <audio controls>
                     <source src="audio/audio_.mp3" type='audio/mpeg; codecs="mp3"'>
                     <source src="audio/audio_ogg.ogg" type='audio/ogg; codecs="vorbis"' >
                 </audio>
                 <br>
                 <br>
+                <br> 
                 <h2 id="entrada5">Videos</h2>
                 <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
-                <video id="medio" controls poster="images/video_default.jpg"> 
+                <video id="video" controls poster="images/video_default.jpg"> 
                     <source src="video/video_webm.webm" type='video/webm; codecs="vp8, vorbis"' /> 
                     <source src="video/video_ogg.ogg" type='video/ogg; codecs="theora, vorbis"' />  
                     <source src="video/video_mp4.mp4" type="video/mp4">
@@ -81,18 +99,21 @@
                 </video>
                 <br>
                 <br>
+                <br> 
                 <h2 id="entrada4">Lorem ipsum 3</h2>
                 <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
-                <img src="images/sin_reconoci.jpg" width="100%" alt="sin reconocimiento">
+                <img src="images/sin_reconoci.jpg" alt="sin reconocimiento">
                 <small>sin reconocimiento</small>
                 <br>
                 <br>
+                <br> 
                 <h2 id="entrada3">Lorem ipsum 2</h2>
                 <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
-                <img src="images/gratis_comercial.jpg" width="100%" alt="gratis comercial">
+                <img src="images/gratis_comercial.jpg" alt="gratis comercial">
                 <small>gratis comercial</small>
                 <br>
                 <br>
+                <br> 
                 <h2 id="entrada2">Lorem ipsum 1</h2>
                 <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam obcaecati omnis quaerat optio itaque, harum rem quibusdam qui architecto suscipit, a illum praesentium dolorem. Labore praesentium adipisci ut similique nulla?
@@ -101,6 +122,7 @@
                 <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55771.569199787344!2d-21.859205246303144!3d64.0983754984417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674a2cfa36185%3A0xd12f6f78004b3644!2sCrossFit%20Reykjavik!5e0!3m2!1ses!2ses!4v1570717293445!5m2!1ses!2ses" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 <br>
                 <br>
+                <br> 
                 <h2 id="entrada1">CrossFit Open 2020</h2>
                 <h5>El CrossFit Open 20.1 ha sido desvelado.</h5>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum velit explicabo soluta totam expedita architecto enim vel deserunt quos beatae. Non ratione mollitia consequuntur incidunt ex aperiam voluptates atque suscipit.!
@@ -188,5 +210,88 @@
             <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional</a>.
         </div>
     </footer>
+    <script>
+        function accionPlay()
+        {
+            if(!medio.paused && !medio.ended) 
+            {
+                medio.pause();
+                play.innerHTML  = '<i class="fas fa-play"></i>';
+            }
+            else
+            {
+                medio.play();
+                play.innerHTML  = '<i class="fas fa-pause"></i>';
+            }
+        }
+        function accionReiniciar()
+        {
+            //Usar propiedad .currentTime
+            //Reproducir el vídeo
+            //Cambiar el valor del botón a ||
+            medio.currentTime = 0;
+            medio.play();
+            play.innerHTML  = '<i class="fas fa-pause"></i>';
+    
+        }
+        function accionRetrasar()
+        {
+            //Usar propiedad .curentTime
+            //Contemplar que no existen valores negativos
+            if(medio.currentTime > 0)
+                medio.currentTime -= 5;
+        }
+        function accionAdelantar()
+        {
+            //Contemplar que no existen valores mayores a medio.duration
+            if(medio.currentTime < medio.duration)
+                medio.currentTime += 5;
+        }
+        function accionSilenciar()
+        {
+            //Utilizar medio.muted = true; o medio.muted = false;
+            if(!medio.muted)
+                medio.muted = true;
+            else
+                medio.muted = false;
+        }   
+        function accionMasVolumen()
+        {
+            //Contemplar que el valor máximo de volumen es 1
+            if(medio.volume >= 0 && medio.volume <= 1)
+            {
+                medio.volume += 0.1;
+            }
+        }
+        function accionMenosVolumen()
+        {
+            //Contemplar que el valor mínimo de volumen es 0
+            if(medio.volume >= 0 && medio.volume <= 1)
+            {
+                medio.volume -= 0.1;
+            }
+        }
+    
+        function iniciar() 
+        {
+            
+            medio = document.getElementById('medio');
+            play = document.getElementById('play');
+            reiniciar = document.getElementById('reiniciar');
+            retrasar = document.getElementById('retrasar');
+            adelantar = document.getElementById('adelantar');
+            silenciar = document.getElementById('silenciar');
+    
+            play.addEventListener('click', accionPlay);
+            reiniciar.addEventListener('click', accionReiniciar);
+            retrasar.addEventListener('click', accionRetrasar);
+            adelantar.addEventListener('click', accionAdelantar);
+            silenciar.addEventListener('click', accionSilenciar);
+            menosVolumen.addEventListener('click', accionMenosVolumen);
+            masVolumen.addEventListener('click', accionMasVolumen);
+        }
+    
+        window.addEventListener('load', iniciar);
+    </script>
 </body>
 </html>
