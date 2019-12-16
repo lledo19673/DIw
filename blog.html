@@ -61,6 +61,26 @@
         <br>
         <article>
             <div class="flex">
+                <h2 id="entrada9">Canvas</h2>
+                <canvas id="lienzo" width="600" height="350"></canvas>
+                <script src="js/juego.js"></script>
+                <br>
+                <br>
+                <br>
+                <h2 id="entrada9">Canvas</h2>
+                <canvas id="canvas" width="600" height="250"></canvas>
+                <script src="js/canva.js"></script>
+                <br>
+                <br>
+                <br>
+                <h2 id="entrada8">Botones audio</h2>
+                <button id="audio1">Sonido 1</button>
+                <button id="audio2">Sonido 2</button>
+                <button id="audio3">Sonido 3</button>
+                <button id="audio4">Sonido 4</button>
+                <br>
+                <br>
+                <br>
                 <h2 id="entrada7">Video botones</h2>
                 <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
                 <video id="medio"> 
@@ -71,7 +91,7 @@
                 </video>
                 <button id="reiniciar"><i class="fas fa-undo-alt"></i></button>
                 <button id="retrasar"><i class="fas fa-backward"></i></button>
-                <button id="play"><i class="fas fa-play"></i></button>
+                <button id="play" class="shake"><i class="fas fa-play"></i></button>
                 <button id="adelantar"><i class="fas fa-forward"></i></button>
                 <button id="silenciar"><i class="fas fa-volume-mute"></i></button>
                 <button id="menosVolumen"><i class="fas fa-volume-down"></i></button>
@@ -102,14 +122,14 @@
                 <br> 
                 <h2 id="entrada4">Lorem ipsum 3</h2>
                 <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
-                <img src="images/sin_reconoci.jpg" alt="sin reconocimiento">
+                <img src="images/sin_reconoci.jpg" alt="sin reconocimiento" class="img-in">
                 <small>sin reconocimiento</small>
                 <br>
                 <br>
                 <br> 
                 <h2 id="entrada3">Lorem ipsum 2</h2>
                 <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
-                <img src="images/gratis_comercial.jpg" alt="gratis comercial">
+                <img src="images/gratis_comercial.jpg" alt="gratis comercial" class="img-in ">
                 <small>gratis comercial</small>
                 <br>
                 <br>
@@ -271,10 +291,34 @@
                 medio.volume -= 0.1;
             }
         }
-    
+
+        function a1()
+        {
+            var audio1 = new Audio();
+            audio1.src = "https://www.sshhtt.com/images/sampledata/ambient/Amaneceramanecer%20en%20el%20campo%20con%20aves34.mp3";
+            audio1.play();
+        }
+        function a2()
+        {
+            var audio2 = new Audio();
+            audio2.src = "https://www.sshhtt.com/images/sampledata/christmas/white%20christmas%20songWhite_Xmas_Vox_39777.mp3";
+            audio2.play();
+        }
+        function a3()
+        {
+            var audio3 = new Audio();
+            audio3.src = "https://www.sshhtt.com/images/sampledata/mecanics/teclado%20computadora.mp3";
+            audio3.play();
+        }
+        function a4()
+        {
+            var audio4 = new Audio();
+            audio4.src = "https://www.sshhtt.com/images/sampledata/animals/Cat.mp3";
+            audio4.play();
+        }
+
         function iniciar() 
         {
-            
             medio = document.getElementById('medio');
             play = document.getElementById('play');
             reiniciar = document.getElementById('reiniciar');
@@ -289,6 +333,17 @@
             silenciar.addEventListener('click', accionSilenciar);
             menosVolumen.addEventListener('click', accionMenosVolumen);
             masVolumen.addEventListener('click', accionMasVolumen);
+
+            audio1 = document.getElementById("audio1");
+            audio2 = document.getElementById("audio2");
+            audio3 = document.getElementById("audio3");
+            audio4 = document.getElementById("audio4");
+
+            audio1.addEventListener("click", a1);
+            audio2.addEventListener('click', a2);
+            audio3.addEventListener('click', a3);
+            audio4.addEventListener('click', a4);
+
         }
     
         window.addEventListener('load', iniciar);

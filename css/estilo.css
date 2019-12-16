@@ -478,3 +478,49 @@ nav a img {
 article img {
     width: 100%;
 }
+
+.shake {
+    animation-duration: 3s;
+    animation-name: shake;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0%,
+    100% {
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
+    }
+    10% {
+      transform: rotate(8deg);
+    }
+    20%,
+    40%,
+    60% {
+      transform: rotate(-10deg);
+    }
+    30%,
+    50%,
+    70% {
+      transform: rotate(10deg);
+    }
+    80% {
+      transform: rotate(-8deg);
+    }
+    90% {
+      transform: rotate(8deg);
+    }
+}
+.img-in {
+	animation: img-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes img-in {
+    0% {
+      transform: scaleX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+}
+  
